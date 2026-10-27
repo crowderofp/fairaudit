@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crowderofp-fairaudit"
+version = "0.1.0"
+description = "按子群切分结果，计算各组指标与组间差距，标出差距最大的维度"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "crowderofp" }]
+keywords = ["cli", "analysis", "observability", "evaluation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://crowderofp.github.io"
+Repository = "https://github.com/crowderofp/fairaudit"
+Issues = "https://github.com/crowderofp/fairaudit/issues"
+
+[project.scripts]
+fairaudit = "fairaudit:main"
+
+[tool.setuptools]
+py-modules = ["fairaudit"]
